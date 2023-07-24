@@ -1,13 +1,20 @@
 ---
-import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 
-type Props = CollectionEntry<'blog'>['data'];
+export interface Props {
+	title: string;
+    description: string;
+    pubDate: Date;
+   	updatedDate?: Date | undefined;
+    heroImage?: string | undefined;
+ 	current?: string;
+	readingTime?: string; 
+}
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, current, readingTime } = Astro.props;
 ---
 
 <html lang="en">
@@ -29,12 +36,15 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	</head>
 
 	<body>
-		<Header />
+		<Header current={current !== "about" ? "blog" : "about"  } />
 		<main>
 			<article>
 				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-				<h1 class="title">{title}</h1>
-				<FormattedDate date={pubDate} />
+				<h1 class="title">{title}
+					
+				</h1>
+				<FormattedDate date={pubDate} /> 
+				{readingTime &&  `~ ${readingTime}`}
 				{
 					updatedDate && (
 						<div class="last-updated-on">

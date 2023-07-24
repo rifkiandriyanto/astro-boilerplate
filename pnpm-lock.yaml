@@ -17,6 +17,9 @@ dependencies:
   astro:
     specifier: ^2.8.3
     version: 2.8.3
+  reading-time:
+    specifier: ^1.5.0
+    version: 1.5.0
 
 packages:
 
@@ -3034,6 +3037,10 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
+    dev: false
+
+  /reading-time@1.5.0:
+    resolution: {integrity: sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==}
     dev: false
 
   /rehype-parse@8.0.4:
