@@ -21,6 +21,11 @@ dependencies:
     specifier: ^1.5.0
     version: 1.5.0
 
+devDependencies:
+  husky:
+    specifier: ^8.0.0
+    version: 8.0.0
+
 packages:
 
   /@ampproject/remapping@2.2.1:
@@ -1935,6 +1940,12 @@ packages:
     resolution: {integrity: sha512-nZXjEF2nbo7lIw3mgYjItAfgQXog3OjJogSbKa2CQIIvSGWcKgeJnQlNXip6NglNzYH45nSRiEVimMvYL8DDqQ==}
     engines: {node: '>=14.18.0'}
     dev: false
+
+  /husky@8.0.0:
+    resolution: {integrity: sha512-4qbE/5dzNDNxFEkX9MNRPKl5+omTXQzdILCUWiqG/lWIAioiM5vln265/l6I2Zx8gpW8l1ukZwGQeCFbBZ6+6w==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: true
 
   /ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
